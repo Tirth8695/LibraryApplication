@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "482677885376",
+    "firebase_url": "https://libraryapp-e0341-default-rtdb.firebaseio.com",
+    "project_id": "libraryapp-e0341",
+    "storage_bucket": "libraryapp-e0341.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482677885376:android:c3f493e74c064fa048a025",
+        "android_client_info": {
+          "package_name": "com.example.libraryapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzMG2i8DaBGzDfYI4Ia0ZbIuOxVt8kK6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

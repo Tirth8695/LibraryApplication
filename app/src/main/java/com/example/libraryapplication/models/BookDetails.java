@@ -5,6 +5,16 @@ public class BookDetails {
     String AuthorName;
     int NumberOfPages;
 
+    public BookDetails(String title, String authorName, int numberOfPages) {
+        Title = title;
+        AuthorName = authorName;
+        NumberOfPages = numberOfPages;
+    }
+
+    public BookDetails() {
+
+    }
+
     public String getTitle() {
         return Title;
     }
