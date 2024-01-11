@@ -14,32 +14,32 @@ import com.example.libraryapplication.models.BookDetails;
 
 import java.util.ArrayList;
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
+public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHolder> {
     Context context;
     ArrayList<BookDetails> bookDetailsArrayList;
 
-    public ListAdapter(Context context, ArrayList<BookDetails> bookDetailsArrayList) {
+    public BookListAdapter(Context context, ArrayList<BookDetails> bookDetailsArrayList) {
         this.context = context;
         this.bookDetailsArrayList = bookDetailsArrayList;
     }
 
     @NonNull
     @Override
-    public ListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BookListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_list_books,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_books,parent,false);
         
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BookListAdapter.ViewHolder holder, int position) {
         BookDetails bookdetails = bookDetailsArrayList.get(position);
         //get the element from the data set at this position and replace the
         //contents of the view with that element
         holder.bookTitle.setText(bookdetails.getTitle());
         holder.authorName.setText(bookdetails.getAuthorName());
-        holder.numberOfPages.setText(bookdetails.getNumberOfPages());
+        holder.numberOfPages.setText(String.valueOf(bookdetails.getNumberOfPages()));
     }
 
     @Override
@@ -49,12 +49,12 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        EditText bookTitle, authorName, numberOfPages;
+        TextView bookTitle, authorName, numberOfPages;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            bookTitle = itemView.findViewById(R.id.booktitle_text);
-            authorName = itemView.findViewById(R.id.authorbook_text);
-            numberOfPages = itemView.findViewById(R.id.editTextNumber);
+            bookTitle = itemView.findViewById(R.id.textView);
+            authorName = itemView.findViewById(R.id.textView2);
+            numberOfPages = itemView.findViewById(R.id.textView3);
         }
     }
 }
